@@ -68,7 +68,7 @@
             Hide() {
                 this.isShow = false;
             },
-            Enter(el) {
+            Enter() {
                 const content = this.$slots.popover[0].elm
                 const popover = this.$refs.popover
                 const offset = this.offset
@@ -80,19 +80,18 @@
                         popover.style.left = (contentWidth / 2) - (popover.offsetWidth / 2) + 'px';
                         popover.style.top = -this.$refs.popover.offsetHeight - contentHeight + 'px';
                         break;
-                    case 'bottom':
-                        popover.style.left = (contentWidth / 2) - (popover.offsetWidth / 2) + 'px';
-                        popover.style.top = contentHeight + offset + 'px';
-                        break;
                     case 'left':
                         popover.style.left = -popover.offsetWidth - offset + 'px';
-                        popover.style.top = (contentHeight / 2)-(popover.offsetHeight / 2) + 'px';
+                        popover.style.top = (contentHeight / 2) - (popover.offsetHeight / 2) + 'px';
                         break;
                     case 'right':
                         popover.style.left = contentWidth + offset + 'px';
                         popover.style.top = (contentHeight / 2) - (popover.offsetHeight / 2) + 'px';
                         break;
+                    case 'bottom':
                     default:
+                        popover.style.left = (contentWidth / 2) - (popover.offsetWidth / 2) + 'px';
+                        popover.style.top = contentHeight + offset + 'px';
                         break;
                 }
             },
