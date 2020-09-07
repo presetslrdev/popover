@@ -1,4 +1,4 @@
-# popover
+# vue-popover
 
 ## Project setup
 ```
