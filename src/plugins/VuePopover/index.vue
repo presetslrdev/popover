@@ -93,7 +93,6 @@
                         popover.style.top = (contentHeight / 2) - (popover.offsetHeight / 2) + 'px';
                         break;
                     default:
-                        el.style.marginBottom = offset + 'px';
                         break;
                 }
             },
